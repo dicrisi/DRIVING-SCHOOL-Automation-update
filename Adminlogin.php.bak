@@ -1,0 +1,56 @@
+<?php
+  include_once("header.php"); 
+ if(isset($_POST['login']))
+ {
+	 echo '<script> alert("Login Failed");</script>';
+	if($_POST['uid']=="admin" && $_POST['password']=="admin")
+	 {
+		
+	 header("location:adminhome.php");
+
+	 }
+	 else
+	 {
+	 	 	echo '<script> alert("Login Failed");</script>';
+	 }
+ }
+ 
+?>
+
+
+<div align="center">
+
+
+	<form action="" name="login_form" id="login_form"  method="post">
+	<div class="imgcontainer">
+  
+  </div>
+
+  <div class="container">
+  <h1>Login</h1>
+  <table class="displaycontent" width="400" height="120">
+  	<tr>
+    <td><label for="uname"><p>Username</p></label></td>
+  <td> <input type="text" placeholder="Enter Username" name="uid" required ></td>
+		</tr>
+
+	<tr>
+	<td>
+    <label for="psw"><p>Password</p></label></td>
+   <td> <input type="password" placeholder="Enter Password" name="password" required ></td>
+		</tr>
+		  </table>
+        <br>
+    <input type="submit" name="login" value="Login" style="color: #000000"/>
+ 
+  </div>
+
+
+	</form>
+
+
+
+
+</div>
+
+<?php include("footer.php")?>
